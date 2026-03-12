@@ -83,7 +83,7 @@ fun SplashScreen(
                 contentDescription = "Reverie Logo",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
-                    .size(110.dp)
+                    .size(400.dp)
                     .alpha(logoAlpha.value)
                     .scale(logoScale.value)
                     .graphicsLayer {
