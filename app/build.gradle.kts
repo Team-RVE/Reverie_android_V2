@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.reverie_v2"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.reverie_v2"
