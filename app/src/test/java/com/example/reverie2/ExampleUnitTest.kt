@@ -1,6 +1,6 @@
-package com.example.reverie_v2
+package com.example.reverie2
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**

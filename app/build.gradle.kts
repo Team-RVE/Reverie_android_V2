@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.reverie_v2"
+    namespace = "com.example.reverie2"
     compileSdk = 35
 
     defaultConfig {
@@ -24,7 +24,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }

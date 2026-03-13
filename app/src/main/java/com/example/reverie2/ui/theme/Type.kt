@@ -1,4 +1,4 @@
-package com.example.reverie_v2.ui.theme
+package com.example.reverie2.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
