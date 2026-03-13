@@ -27,9 +27,7 @@ import com.example.reverie_v2.R
 private val SplashBackground = Color(0xFFFAF9F6)
 
 @Composable
-fun SplashScreen(
-    modifier: Modifier = Modifier,
-) {
+fun SplashScreen(modifier: Modifier = Modifier) {
     val logoAlpha = remember { Animatable(0f) }
     val logoScale = remember { Animatable(0.85f) }
     val revealProgress = remember { Animatable(0f) }
@@ -37,61 +35,67 @@ fun SplashScreen(
     LaunchedEffect(Unit) {
         revealProgress.animateTo(
             targetValue = 1f,
-            animationSpec = tween(
-                durationMillis = 900,
-                easing = LinearEasing,
-            ),
+            animationSpec =
+                tween(
+                    durationMillis = 900,
+                    easing = LinearEasing,
+                ),
         )
     }
 
     LaunchedEffect(Unit) {
         logoAlpha.animateTo(
             targetValue = 1f,
-            animationSpec = tween(
-                durationMillis = 700,
-                easing = LinearEasing,
-            ),
+            animationSpec =
+                tween(
+                    durationMillis = 700,
+                    easing = LinearEasing,
+                ),
         )
     }
 
     LaunchedEffect(Unit) {
         logoScale.animateTo(
             targetValue = 1f,
-            animationSpec = tween(
-                durationMillis = 850,
-                easing = FastOutSlowInEasing,
-            ),
+            animationSpec =
+                tween(
+                    durationMillis = 850,
+                    easing = FastOutSlowInEasing,
+                ),
         )
     }
 
     Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(SplashBackground),
+        modifier =
+            modifier
+                .fillMaxSize()
+                .background(SplashBackground),
         contentAlignment = Alignment.Center,
     ) {
         Box(
-            modifier = Modifier
-                .size(140.dp)
-                .clipToBounds(),
+            modifier =
+                Modifier
+                    .size(140.dp)
+                    .clipToBounds(),
             contentAlignment = Alignment.Center,
         ) {
             Image(
                 painter = painterResource(id = R.drawable.reverie_logo),
                 contentDescription = "Reverie Logo",
                 contentScale = ContentScale.Fit,
-                modifier = Modifier
-                    .size(400.dp)
-                    .alpha(logoAlpha.value)
-                    .scale(logoScale.value)
-                    .graphicsLayer {
-                        val progress = revealProgress.value
-                        clip = true
-                        scaleX = logoScale.value
-                        scaleY = logoScale.value
-                        alpha = logoAlpha.value
-                        translationY = (1f - progress) * 24f
-                    },
+                modifier =
+                    Modifier
+                        .size(400.dp)
+                        .alpha(logoAlpha.value)
+                        .scale(logoScale.value)
+                        .graphicsLayer {
+                            val progress = revealProgress.value
+                            clip = true
+                            scaleX = logoScale.value
+                            scaleY = logoScale.value
+                            alpha = logoAlpha.value
+                            translationY = (1f - progress) * 24f
+                        },
             )
         }
     }
