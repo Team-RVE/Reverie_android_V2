@@ -1,4 +1,4 @@
-package com.example.reverie_v2.ui.feature.splash
+package com.example.reverie2.ui.feature.splash
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -22,12 +22,12 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.reverie_v2.R
+import com.example.reverie2.R
 
 private val SplashBackground = Color(0xFFFAF9F6)
 
 @Composable
-fun SplashScreen(modifier: Modifier = Modifier) {
+fun splashScreen(modifier: Modifier = Modifier) {
     val logoAlpha = remember { Animatable(0f) }
     val logoScale = remember { Animatable(0.85f) }
     val revealProgress = remember { Animatable(0f) }
