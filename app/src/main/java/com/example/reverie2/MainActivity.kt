@@ -20,7 +20,11 @@ class MainActivity : ComponentActivity() {
                 delay(2500)
                 showSplash = false
             }
-            splashScreen()
+           if(showSplash) {
+               splashScreen()
+           } else {
+              // TODO: 앱의 메인 화면 렌더링 하기
+           }
         }
     }
 }
